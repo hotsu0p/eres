@@ -41,9 +41,9 @@ module.exports = class Ping extends Command {
 			}
 		}
 
-		const canvas = createCanvas(550, 215);
+		const canvas = createCanvas(570, 215);
 		const ctx = canvas.getContext('2d');
-		roundRect(ctx, 0, 0, 550, 215, 20, '#23272A');
+		roundRect(ctx, 0, 0, 570, 215, 23, '#23272A');
 
 		ctx.fillStyle = '#ffffff';
 		ctx.font = '20px Sans-serif';
@@ -60,7 +60,7 @@ module.exports = class Ping extends Command {
 		const globeY = (canvas.height - globeSize) / 2;
 		ctx.drawImage(globe, globeX, globeY, globeSize, globeSize);
 
-		ctx.fillText('All Systems Operational', 330, 150);
+		ctx.fillText('All Systems Operational', 320, 150);
 		ctx.fillText('Roundtrip', 170, 110);
 		ctx.fillText(`${Math.round(Date.now() - now)} ms`, 170, 150);
 		ctx.fillText('API', 100, 110);
